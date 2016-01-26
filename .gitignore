@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ng-starter.iml
-.idea
+.idea/
 node_modules
+PhantomJS_1.9.8_(Windows_8_0.0.0)
 bower_components
 npm-debug.log
