@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+ng-starter.iml
+.idea
+node_modules
+bower_components
+npm-debug.log
