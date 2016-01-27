@@ -1,3 +1,5 @@
-body {
-  color: red;
+.app {
+  & .app__title {
+    color: red
+  }
 }

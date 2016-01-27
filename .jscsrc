@@ -1,0 +1,15 @@
+{
+  "jsDoc": {
+    "checkAnnotations": {
+      "preset": "jsdoc3",
+      "extra": {
+        "ngdoc": "some",
+        "methodOf": "some",
+        "scope": "false",
+        "restrict": "some",
+        "element": "some",
+        "propertyOf": "some"
+      }
+    }
+  }
+}

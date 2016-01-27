@@ -1,11 +1,11 @@
-/**
- * Created by e0000703 on 25/01/2016.
- */
 import './test.scss';
-import controller from './test.controller';
-import template from './test.jade';
+import template from './test.tpl.jade';
 
-let testComponent = () => (
+import angular from 'angular';
+import controller from './test.controller';
+
+export default angular.module('app.components.test', [])
+  .directive('test', () => (
   {
     restrict: 'E',
     scope: {},
@@ -15,6 +15,5 @@ let testComponent = () => (
     bindToController: true,
     replace: true
   }
-);
+  ));
 
-export default testComponent;

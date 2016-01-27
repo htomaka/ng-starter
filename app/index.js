@@ -4,18 +4,18 @@ import template from './app.jade';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import ngAria from 'angular-aria';
-import componentsModule from './components/components';
-import commonModule from './common/common';
+import components from './components';
 
-angular.module('app', [
+export default angular.module('app', [
     uiRouter,
     ngAria,
-    componentsModule.name,
-    commonModule.name
+    components.name
   ])
   .directive('app', () => (
-    {
-      restrict: 'E',
-      template
-    }
-));
+  {
+    restrict: 'E',
+    scope: {},
+    template,
+    replace: true
+  }
+  ));
