@@ -1,5 +1,5 @@
 import angular from 'angular';
-import test from './test';
+import counter from './counter';
 
-export default angular.module('app.components', [test.name]);
+export default angular.module('app.components', [counter.name]);
 

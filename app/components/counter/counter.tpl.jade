@@ -1,0 +1,9 @@
+div#counter
+    p.lead {{ counter.counter }}
+    ul.list-inline
+        li
+            button.btn(ng-click="counter.increment()") Increase
+        li
+            button.btn(ng-click="counter.decrement()") Decrease
+        li
+            button.btn(ng-click="counter.reset()") Reset

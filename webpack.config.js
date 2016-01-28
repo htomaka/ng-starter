@@ -1,8 +1,9 @@
 'use strict';
 var webpack = require('webpack');
 var path = require('path');
-var port = process.env.PORT || 3000;
+var port = 3000;
 
+console.log(process.argv);
 module.exports = {
   entry: {
     app: [
@@ -29,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel?presets[]=es2015',
+        loader: 'ng-annotate!babel?presets[]=es2015',
         exclude: /node_modules|bower_components/
       },
       {
