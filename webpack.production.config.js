@@ -1,13 +1,10 @@
 'use strict';
 var webpack = require('webpack');
 var path = require('path');
-var port = 3000;
 
 module.exports = {
   entry: {
     app: [
-      'webpack/hot/dev-server',
-      'webpack-dev-server/client?http://localhost:' + port,
       './app/index.js'
     ],
     vendors: ['angular']
@@ -59,21 +56,7 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    // in case of CORS issues
-    proxy: {
-      '/api/*': {
-        target: {
-          host: 'localhost',
-          port: 8080
-        },
-        secure: false
-      }
-    },
-    port: port
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 };

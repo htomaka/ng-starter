@@ -1,4 +1,4 @@
-# Angular ES6 Starter Kit
+# Future-proof AngularJS starter kit
 
 This repo serves as a starter kit for building large [AngularJS](https://angularjs.org/) apps.
 It features:
@@ -25,7 +25,7 @@ Clone or fork the repo then `npm install`
 
 ####Developement
 
-Run `npm run start` which fired a developpement server with live reload.
+Run `npm run start` which fires a developpement server with hot reload.
 
 ####Production
 
@@ -36,28 +36,37 @@ Run `npm run build` to build an optimized package for production.
     app/
     	assets/ -> images, fonts etc.
     	components/
-	    	common/ -> reusable components such as header, footer or ui widgets
-	    	feature1/
-		    	index.js -> component definition
+	    	common/ -> dumb components
+	    	feature1/ -> smart components
+		    	index.js -> module and directive definition object
 		    	feature1.tpl.jade -> component template
 		    	feature1.scss -> component specific styles
 		    	feature1.spec.js -> component tests
 		    index.js -> components entry file
     	shared/ -> Shared ressources such as factories, filters, helpers etc.
-    	app.tpl.jade -> main layout template we use jade but feel free to use html
+    	app.tpl.jade -> main layout template we use Jade but feel free to use html
 	    app.scss -> layout styles
 	    index.js -> app entry point and top-level component
     build/ -> production code to deploy
     	index.html
 
-Your application is a tree of components (directives). Every element in your ui is treated as a small focused component with it own logic, styles and markup. This architecture favors reusability, ease of maintenance and testability.
+Imagine your application as a tree of components (directives). Every element in the UI is treated as a small focused component with it own logic, styles and markup. This architecture favors reusability, ease of maintenance and testability.
+
+> Notice we use two types of components:
+>
+> **Smart components** are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
+>
+> **Dumb components** are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
 
 ## Testing
 
-This package comes with a ready-to-go testing environment. Default configuration features Karma, Jasmine and PhantomJS which plays well with CI. Be sure to use the `*.spec.js` naming convention for your test files.
+This package comes with a ready-to-go testing environment. Default configuration features Karma, Jasmine and PhantomJS which plays well with CI servers. Be sure to use the `*.spec.js` naming convention for your test files.
 
 Run `npm run test` to run the tests.
 
+## Todo
+
+- E2E tests integration with protractor
 
 
 

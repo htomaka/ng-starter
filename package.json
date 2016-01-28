@@ -5,8 +5,8 @@
   "main": "app/app.js",
   "scripts": {
     "test": "karma start",
-    "start": "webpack-dev-server --port 5000 --devtool eval --progress --colors --hot --content-base build",
-    "build": "webpack --optimize-dedupe --optimize-minimize"
+    "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "build": "webpack -p --config webpack.production.config.js"
   },
   "repository": {
     "type": "git",
