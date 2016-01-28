@@ -1,0 +1,10 @@
+div.autocomplete
+    div.autocomplete__form
+        p
+            label(for="term") Term
+        p
+            input(type="text" ng-model="vm.term" placeholder="Search term" id="term" ng-keyup="vm.handleSearch(vm.term)")
+    div.autocomplete__result
+        ul
+            li(ng-repeat="result in vm.results") {{vm.results[$index]}}
+
