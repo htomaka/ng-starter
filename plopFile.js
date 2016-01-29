@@ -4,7 +4,6 @@ module.exports = function(plop) {
   plop.addHelper('upCaseName', function(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
   });
-  plop.addPrompt('directory', require('inquirer-directory'));
 
   // We declare a new generator called "module"
   plop.setGenerator('component', {
@@ -16,10 +15,10 @@ module.exports = function(plop) {
     // That's Inquirer.js doing the job behind the hood.
     prompts: [
       {
-        type: 'directory',
-        name: 'from',
-        message: 'Where you like to put this component?',
-        basePath: './app/components/'
+        type: 'list',
+        name: 'type',
+        choices: ['component', 'container'],
+        message: 'What is your component type?'
       },
       {
         type: 'input',
@@ -32,8 +31,7 @@ module.exports = function(plop) {
     // Here we "add" new files from our templates.
     actions: [
       function makeDir(answers) {
-        console.log(answers);
-        var dir = './app/components/' + answers.from + '/' + answers.name;
+        var dir = './app/' + answers.type + 's/' + answers.name;
         if (!fs.existsSync(dir)) {
           fs.mkdirSync(dir);
         }
@@ -41,27 +39,27 @@ module.exports = function(plop) {
       },
       {
         type: 'add',
-        path: 'app/components/{{name}}/{{name}}.js',
+        path: 'app/{{type}}s/{{name}}/{{name}}.js',
         templateFile: 'generator/temp.js'
       },
       {
         type: 'add',
-        path: 'app/components/{{name}}/{{name}}.spec.js',
+        path: 'app/{{type}}s/{{name}}/{{name}}.spec.js',
         templateFile: 'generator/temp.spec.js'
       },
       {
         type: 'add',
-        path: 'app/components/{{name}}/{{name}}.scss',
+        path: 'app/{{type}}s/{{name}}/{{name}}.scss',
         templateFile: 'generator/temp.scss'
       },
       {
         type: 'add',
-        path: 'app/components/{{name}}/{{name}}.tpl.jade',
+        path: 'app/{{type}}s/{{name}}/{{name}}.tpl.jade',
         templateFile: 'generator/temp.tpl.jade'
       },
       {
         type: 'add',
-        path: 'app/components/{{name}}/{{name}}.controller.js',
+        path: 'app/{{type}}s/{{name}}/{{name}}.controller.js',
         templateFile: 'generator/temp.controller.js'
       }
     ]

@@ -3,9 +3,9 @@
  */
 import angular from 'angular';
 import template from './autocomplete.tpl.jade';
-import controller from './autocomplete.controller';
+import controller from './autocomplete.controller.js';
 
-export default angular.module('app.components.common.autocomplete', [])
+export default angular.module('app.components.autocomplete', [])
   .directive('autoComplete', () =>({
     restrict: 'E',
     scope: {

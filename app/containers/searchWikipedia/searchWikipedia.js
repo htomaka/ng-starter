@@ -5,7 +5,7 @@ import template from './searchWikipedia.tpl.jade';
 import angular from 'angular';
 import controller from './searchWikipedia.controller.js';
 
-export default angular.module('app.components.searchWikipedia', [])
+export default angular.module('app.containers.searchWikipedia', [])
   .directive('searchWikipedia', () => (
   {
     restrict: 'E',

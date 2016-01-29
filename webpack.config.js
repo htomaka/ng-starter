@@ -9,7 +9,7 @@ module.exports = {
     app: [
       'webpack/hot/dev-server',
       'webpack-dev-server/client?http://localhost:' + port,
-      './app/index.js'
+      './app/'
     ],
     vendors: ['angular']
   },

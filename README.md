@@ -35,9 +35,9 @@ Run `npm run build` to build an optimized package for production.
 
     app/
     	assets/ -> images, fonts etc.
-    	components/
-	    	common/ -> dumb components
-	    	feature1/ -> smart components
+    	common/ -> presentational components
+    	components/ -> containers
+	    	feature1/
 		    	index.js -> module and directive definition object
 		    	feature1.tpl.jade -> component template
 		    	feature1.scss -> component specific styles
@@ -54,15 +54,22 @@ Imagine your application as a tree of components (directives). Every element in 
 
 > Notice we use two types of components:
 >
-> **Smart components** are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
+> **Containers components** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
 >
-> **Dumb components** are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
+> **Presentational components** also called *dumb components* are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
 
 ## Testing
 
-This package comes with a ready-to-go testing environment. Default configuration features Karma, Jasmine and PhantomJS which plays well with CI servers. Be sure to use the `*.spec.js` naming convention for your test files.
+This package comes with a ready-to-go testing environment. Default configuration features Karma, Jasmine and PhantomJS which plays well with CI. Be sure to use the `*.spec.js` naming convention for your test files.
 
 Run `npm run test` to run the tests.
+
+## Generator
+
+All components follow the same structure. We automated that tedious task of creating component folders with a light Yeoman-like generator built with [Plop](https://github.com/amwmedia/plop).
+
+To create a new component, run `npm run generator` and follow instructions on screen.
+Available options are `type ['component', 'container']` and `name`
 
 ## Todo
 

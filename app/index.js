@@ -7,12 +7,14 @@ import uiRouter from 'angular-ui-router';
 import ngAria from 'angular-aria';
 
 import components from './components';
+import containers from './containers';
 import shared from './shared';
 
 export default angular.module('app', [
     uiRouter,
     ngAria,
     components.name,
+    containers.name,
     shared.name
   ])
   .directive('app', () => (

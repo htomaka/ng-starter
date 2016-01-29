@@ -1,0 +1,8 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+*.java text eol=crlf
+*.properties text eol=crlf
+*.xml text eol=crlf
+*.xsd text eol=crlf
+*.ftl text eol=crlf
+*.js text eol=crlf
+*.md text eol=crlf

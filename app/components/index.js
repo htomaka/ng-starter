@@ -1,9 +1,9 @@
+/**
+ * Created by e0000703 on 28/01/2016.
+ */
 import angular from 'angular';
-import common from './common';
-import searchWikipedia from './searchWikipedia';
+import autocomplete from './autocomplete/autocomplete';
 
 export default angular.module('app.components', [
-  common.name,
-  searchWikipedia.name
+  autocomplete.name
 ]);
-

@@ -1,5 +1,3 @@
-import _ from 'lodash';
-
 class SearchWikipediaController {
   constructor(WikipediaService) {
     this.wikipediaService = WikipediaService;

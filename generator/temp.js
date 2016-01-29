@@ -3,7 +3,7 @@ import template from './{{name}}.tpl.jade';
 import controller from './{{name}}.controller';
 import './{{name}}.scss';
 
-export default angular.module('app.components.{{name}}', [])
+export default angular.module('app.{{type}}s.{{name}}', [])
   // put route config here
   .directive('{{name}}', () =>({
     restrict: 'E',
