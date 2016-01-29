@@ -16,7 +16,7 @@ function WikipediaService($http) {
       .then(results => {
         angular.copy(results.data[1], this.results);
       });
-  };
+  }
 
   return {
     results,

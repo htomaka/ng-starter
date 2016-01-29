@@ -11,5 +11,8 @@
         "propertyOf": "some"
       }
     }
-  }
+  },
+  "excludeFiles": [
+    "./generator/component/temp.controller.js"
+  ]
 }
