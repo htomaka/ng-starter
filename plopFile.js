@@ -55,11 +55,6 @@ module.exports = function(plop) {
         type: 'add',
         path: 'app/components/{{name}}/{{name}}.controller.js',
         templateFile: 'generator/temp.controller.js'
-      },
-      {
-        type: 'add',
-        path: 'app/components/{{name}}/{{name}}.component.js',
-        templateFile: 'generator/temp.component.js'
       }
     ]
 

@@ -1,6 +1,16 @@
 import angular from 'angular';
-import component from './{{name}}.component';
+import template from './{{name}}.tpl.jade';
+import controller from './{{name}}.controller';
+import './{{name}}.scss';
 
 export default angular.module('app.components.{{name}}', [])
   // put route config here
-  .directive('{{name}}', component);
+  .directive('{{name}}', () =>({
+    restrict: 'E',
+    scope: {},
+    template,
+    controller,
+    controllerAs: 'vm',
+    bindToController: true,
+    replace: true
+  }));

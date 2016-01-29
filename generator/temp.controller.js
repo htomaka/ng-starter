@@ -1,3 +1,4 @@
+// jscs:disable parseError
 class {{upCaseName name}}Controller {
   constructor() {
     this.name = '{{ name }} component';
