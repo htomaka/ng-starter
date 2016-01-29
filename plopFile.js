@@ -4,6 +4,7 @@ module.exports = function(plop) {
   plop.addHelper('upCaseName', function(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
   });
+  plop.addPrompt('directory', require('inquirer-directory'));
 
   // We declare a new generator called "module"
   plop.setGenerator('component', {
@@ -15,6 +16,12 @@ module.exports = function(plop) {
     // That's Inquirer.js doing the job behind the hood.
     prompts: [
       {
+        type: 'directory',
+        name: 'from',
+        message: 'Where you like to put this component?',
+        basePath: './app/components/'
+      },
+      {
         type: 'input',
         name: 'name',
         message: 'What is your component name?'
@@ -25,7 +32,8 @@ module.exports = function(plop) {
     // Here we "add" new files from our templates.
     actions: [
       function makeDir(answers) {
-        var dir = __dirname + '/app/components/' + answers.name;
+        console.log(answers);
+        var dir = './app/components/' + answers.from + '/' + answers.name;
         if (!fs.existsSync(dir)) {
           fs.mkdirSync(dir);
         }

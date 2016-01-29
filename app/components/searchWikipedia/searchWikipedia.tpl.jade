@@ -1,2 +1,8 @@
 div.searchwikipedia
+    figure
+        img(src=require('../../assets/images/example.jpg'))
+        figcaption Image loaded with webpack:
+        pre src=require('path/vers/mon-image.jpg')
+
+    h2 Search wikipedia
     auto-complete(on-search="vm.searchWikipedia(term)" results="vm.results")
