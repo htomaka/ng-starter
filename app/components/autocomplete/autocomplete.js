@@ -2,7 +2,7 @@
  * @ngdoc directive
  * @name  app.components:autocomplete
  * @restrict 'E'
- * @description example of a dumb component
+ * @description Example of a dumb component
  * @scope
  **/
 
@@ -15,6 +15,8 @@ export default angular.module('app.components.autocomplete', [])
     restrict: 'E',
     scope: {
       onSearch: '&',
+      // one-way data binding
+      // see http://teropa.info/blog/2015/10/18/refactoring-angular-apps-to-components.html#replace-two-way-binding-with-one-way-binding
       getResults: '&results'
     },
     template,
