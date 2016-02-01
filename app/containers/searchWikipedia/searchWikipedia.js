@@ -1,6 +1,10 @@
 /**
- * Created by e0000703 on 28/01/2016.
- */
+ * @ngdoc directive
+ * @name  app.containers:wikipediaSearch
+ * @restrict 'E'
+ * @description example of a smart component
+ * @scope
+ **/
 import template from './searchWikipedia.tpl.jade';
 import angular from 'angular';
 import controller from './searchWikipedia.controller.js';

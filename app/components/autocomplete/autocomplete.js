@@ -1,6 +1,11 @@
 /**
- * Created by e0000703 on 28/01/2016.
- */
+ * @ngdoc directive
+ * @name  app.components:autocomplete
+ * @restrict 'E'
+ * @description example of a dumb component
+ * @scope
+ **/
+
 import angular from 'angular';
 import template from './autocomplete.tpl.jade';
 import controller from './autocomplete.controller.js';
@@ -10,7 +15,7 @@ export default angular.module('app.components.autocomplete', [])
     restrict: 'E',
     scope: {
       onSearch: '&',
-      results: '='
+      getResults: '&results'
     },
     template,
     controller,
