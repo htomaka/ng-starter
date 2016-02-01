@@ -15,9 +15,9 @@ function WikipediaService($http) {
     })
       .then(results => {
         angular.copy(results.data[1], this.results);
-      });
+      })
+      .catch(error => console.error('Cannot get results', error));
   }
-
   return {
     results,
     getResults

@@ -9,7 +9,9 @@ It features:
 - Component-based architecture for scalability and smoother transition to [Angular 2](https://angular.io/)
 - [Karma](https://karma-runner.github.io/0.13/index.html) / [Jasmine](http://jasmine.github.io/) a ready-to-go test environment
 
- This kit is heavily-inspired from [NG6-starter](https://github.com/AngularClass/NG6-starter), the major difference is dropped dependency to [Gulp](http://gulpjs.com/) and uses NPM as its task-runner.
+ This kit is heavily-inspired from [NG6-starter](https://github
+ .com/AngularClass/NG6-starter), the major difference is dropped dependency 
+ to [Gulp](http://gulpjs.com/) and uses NPM instead.
 
 ## Getting started
 
