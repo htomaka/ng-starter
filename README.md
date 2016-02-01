@@ -36,7 +36,7 @@ Run `npm run build` to build an optimized package for production.
     app/
     	assets/ -> images, fonts etc.
     	components/ -> presentational components
-    	containers/ -> containers
+    	containers/ -> smart compoents
 	    	feature1/
 		    	index.js -> module and directive definition object
 		    	feature1.tpl.jade -> component template
@@ -54,7 +54,7 @@ Imagine your application as a tree of components (directives). Every element in 
 
 > Notice we use two types of components:
 >
-> **Containers components** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
+> **Containers** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
 >
 > **Components** also called *dumb components* are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
 
