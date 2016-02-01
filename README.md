@@ -35,8 +35,8 @@ Run `npm run build` to build an optimized package for production.
 
     app/
     	assets/ -> images, fonts etc.
-    	common/ -> presentational components
-    	components/ -> containers
+    	components/ -> presentational components
+    	containers/ -> containers
 	    	feature1/
 		    	index.js -> module and directive definition object
 		    	feature1.tpl.jade -> component template
@@ -56,7 +56,7 @@ Imagine your application as a tree of components (directives). Every element in 
 >
 > **Containers components** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
 >
-> **Presentational components** also called *dumb components* are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
+> **Components** also called *dumb components* are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
 
 ## Testing
 
@@ -70,6 +70,12 @@ All components follow the same structure. We automated that tedious task of crea
 
 To create a new component, run `npm run generator` and follow instructions on screen.
 Available options are `type ['component', 'container']` and `name`
+
+## Documentation
+
+Documentation is generated with [angular-jsdoc](https://github.com/allenhwkim/angular-jsdoc)
+
+Run `npm run docs`
 
 ## Todo
 

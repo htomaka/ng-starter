@@ -4,6 +4,10 @@
  * @restrict 'E'
  * @description Example of a dumb component
  * @scope
+ * @attr {Expression} on-search
+ *  The expression will be executed on key-up event
+ * @attr {Array}
+ *  The query results
  **/
 
 import angular from 'angular';

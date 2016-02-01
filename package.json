@@ -7,7 +7,7 @@
     "test": "karma start",
     "start": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
     "build": "webpack -p --config webpack.production.config.js",
-    "docs": "node node_modules/jsdoc/jsdoc.js -c node_modules/angular-jsdoc/common/conf.json -t node_modules/angular-jsdoc/angular-template -d build/docs -r app/ README.md",
+    "docs": "node node_modules/jsdoc/jsdoc.js -c node_modules/angular-jsdoc/common/conf.json -t node_modules/angular-jsdoc/default -d build/docs -r app/ README.md",
     "generator": "plop"
   },
   "repository": {
@@ -59,7 +59,9 @@
     "karma-phantomjs-launcher": "^0.2.3",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
+    "ng-annotate-loader": "^0.1.0",
     "node-sass": "^3.4.2",
+    "normalize.css": "^3.0.3",
     "phantomjs": "^1.9.19",
     "plop": "^1.4.1",
     "raw-loader": "0.5.1",
