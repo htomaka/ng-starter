@@ -36,7 +36,7 @@ Run `npm run build` to build an optimized package for production.
     app/
     	assets/ -> images, fonts etc.
     	components/ -> presentational components
-    	containers/ -> smart compoents
+    	containers/ -> smart components
 	    	feature1/
 		    	index.js -> module and directive definition object
 		    	feature1.tpl.jade -> component template
