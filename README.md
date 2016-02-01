@@ -10,14 +10,15 @@ It features:
 - [Karma](https://karma-runner.github.io/0.13/index.html) / [Jasmine](http://jasmine.github.io/) a ready-to-go test environment
 
  This kit is heavily-inspired from [NG6-starter](https://github
- .com/AngularClass/NG6-starter), the major difference is dropped dependency 
- to [Gulp](http://gulpjs.com/) and uses NPM instead.
+ .com/AngularClass/NG6-starter), the major difference is dropped dependency
+ to [Gulp](http://gulpjs.com/) for automation. Use NPM instead.
 
 ## Getting started
 
 ### Prerequisites
 
 Check you have `node` and `npm` installed.
+Install these globals `npm install -g webpack phantomjs karma karma-cli`
 
 ### Installation
 
@@ -40,15 +41,15 @@ Run `npm run build` to build an optimized package for production.
     	components/ -> presentational components
     	containers/ -> smart components
 	    	feature1/
-		    	index.js -> module and directive definition object
-		    	feature1.tpl.jade -> component template
+		    	feature1.js -> module and directive definition object
+		    	feature1.tpl.html -> component template
 		    	feature1.scss -> component specific styles
 		    	feature1.spec.js -> component tests
-		    index.js -> components entry file
+		    containers.js -> components entry file
     	shared/ -> Shared ressources such as factories, filters, helpers etc.
-    	app.tpl.jade -> main layout template we use Jade but feel free to use html
-	    app.scss -> layout styles
-	    index.js -> app entry point and top-level component
+    	app.tpl.html -> application shell
+	    app.scss -> global styles
+	    app.js -> app entry point and top-level component
     build/ -> production code to deploy
     	index.html
 
@@ -56,7 +57,7 @@ Imagine your application as a tree of components (directives). Every element in 
 
 > Notice we use two types of components:
 >
-> **Containers** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route. They are aware of the application domain model.
+> **Containers** also called *smart components* are responsible to pass data back and forth between store and views. Theses are not easily reusables and are often bound to a route.
 >
 > **Components** also called *dumb components* are essentially UI elements which are unaware of application domain model. They get data in through bindings and get data out through callbacks.
 
@@ -68,7 +69,7 @@ Run `npm run test` to run the tests.
 
 ## Generator
 
-All components follow the same structure. We automated that tedious task of creating component folders with a light Yeoman-like generator built with [Plop](https://github.com/amwmedia/plop).
+All components follow the same structure. We automated creation of component folders with a light Yeoman-like generator built with [Plop](https://github.com/amwmedia/plop).
 
 To create a new component, run `npm run generator` and follow instructions on screen.
 Available options are `type ['component', 'container']` and `name`
@@ -82,6 +83,7 @@ Run `npm run docs`
 ## Todo
 
 - E2E tests integration with protractor
+- Optimize Webpack config, production bundle
 
 
 
